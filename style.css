@@ -1,0 +1,206 @@
+.hidden {
+    display: none;
+}
+
+.background-image {
+    display: none;
+}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#clock {
+    position: relative;
+    top: -100px;
+    color: white;
+    font-size: 200px;
+    width: 50%;
+
+    margin: 0 auto;
+    margin-top: 200px;
+    text-align: center;
+}
+
+#clock::after {
+    content: '';
+    display: block;
+    width: 60%; /* 가로 길이 조정 */
+    height: 1px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: -20px; /* 원하는 여백 설정 */
+}
+
+#quote {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+#weather {
+    color: white;
+    font-size: 20px;
+    text-align: right;
+}
+
+#greeting {
+    margin-top: 100px;
+    position: relative;
+    top: -150px;
+    color: white;
+    font-size: 70px;
+    text-align: center;
+}
+
+#toDo-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    color: white;
+}
+#toDo-form input[type='text'] {
+    width: 400px;
+    position: relative;
+    top: -350px;
+    margin-left: 50px;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    height: 70px;
+    display: block;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid #a8a2a2;
+}
+
+#toDoGuideMsg {
+    position: relative;
+    top: -300px;
+    color: white; /* 텍스트 색상을 파란색으로 지정 */
+    font-size: 70px; /* 글꼴 크기를 20px로 지정 */
+    margin-left: 50px;
+}
+
+#toDo-list {
+    position: fixed;
+    left: 50%;
+    top: 45%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    width: 100%;
+    margin-top: 30px;
+    max-width: min(525px, 50vw);
+    overflow-y: auto;
+}
+
+#toDo-list::-webkit-scrollbar {
+    display: none;
+}
+
+#toDo-list li {
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+    align-items: center;
+    max-width: 100%;
+    padding: 5px;
+    font-size: min(38px, 3.5vw);
+    word-break: break-all;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+}
+#toDo-list li:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+#toDo-list li span {
+    align-self: center;
+}
+#toDo-list li button {
+    margin-left: 5px;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#login-form {
+    position: relative;
+    top: 400px;
+    width: 670px;
+    height: 50px;
+    font-size: 50px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+#login-form input[type='submit'] {
+    width: 700px;
+    height: 70px;
+    font-size: 50px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    bottom: 50px;
+    border: none;
+    background-color: transparent; /* 투명한 배경색 */
+}
+
+#login-form input[type='text'] {
+    width: 450px;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    height: 70px;
+    right: -20px;
+    border: none;
+    border-bottom: 3px solid #ccc;
+    position: relative;
+    top: 150px;
+
+    background-color: transparent;
+    outline: none;
+}
+
+#logout {
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+}
+
+.strikethrough {
+    text-decoration-color: rgb(2, 48, 254);
+    -webkit-text-decoration-line: line-through;
+    text-decoration-line: line-through;
+}
+
+.username {
+    color: #eab64c;
+    font-size: 85px;
+    border-bottom: 1px solid;
+}
